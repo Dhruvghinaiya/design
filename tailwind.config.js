@@ -17,7 +17,7 @@ export default {
             },
             color:{
                 header:'#ffffff',
-                sidebar:'#dbeafe'
+                sidebar:'#dbeafe',
             },
             height:{
             25:'5rem'
