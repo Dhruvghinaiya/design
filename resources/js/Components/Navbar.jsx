@@ -7,7 +7,7 @@ import {
 import DotIcon from "./Icons/DotIcon";
 const Navbar = () => {
     return (
-        <div className="bg-header  flex items-center w-screen  h-20 justify-between ">
+        <div className="bg-header  flex items-center w-screen   h-20 justify-between ">
             <div className="flex  items-center  gap-3  pl-8 pt-2  text-2xl ">
                 <CubeTransparentIcon className="size-8 " />
                 <h1 className="tracking-wider">Seamless</h1>
