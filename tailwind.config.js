@@ -19,9 +19,11 @@ export default {
             colors:{
                 header:'#ffffff',
                 Sidebar:'#312e81',
-                textcolor:'#1d4ed8',
-                maincontent:'#e5e7eb',
-                cardcolor:'#9ca3af'
+                textcolor:'#3d447f',
+                maincontent:'#edefee',
+                cardcolor:'#cbd5e1',
+                linkHover:'#171e52',
+                secondary:'#d4d4d4'
             },
             height:{
             25:'5rem'
