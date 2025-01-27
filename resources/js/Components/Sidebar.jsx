@@ -16,7 +16,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false); 
 
   const links = [
-    { name: 'DASHBOARD', icon: HomeIcon,route:'dashboard' },
+    { name: 'DASHBAORD', icon: HomeIcon,route:'dashboard' },
     { name: 'ORGANIZATION', icon: UsersIcon ,route:'#'},
     { name: 'MEMBERSHIP', icon: UsersIcon ,route:'#'},
     { name: 'FINANCIALS', icon: CurrencyDollarIcon,route:'#' },
@@ -54,9 +54,9 @@ const Sidebar = () => {
       </button>
 
       <div 
-        className={`fixed top-0 left -0 w-56 h-full bg-Sidebar opacity-95 z-40 transition-transform transform ${
+        className={`fixed top-0 left-0  w-57 h-full bg-Sidebar opacity-95 z-40 overflow-y-auto  transition-transform transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } sm:translate-x-0 sm:w-56 sm:block sm:relative sm:h-auto sm:opacity-100  `}
+        } sm:translate-x-0  sm:block sm:relative sm:h-auto sm:opacity-100  `}
       >
         <div className="flex flex-col items-center h-full    ">
        

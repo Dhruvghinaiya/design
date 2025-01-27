@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { PencilSquareIcon } from "@heroicons/react/24/solid";
+import Switch from '@mui/material/Switch';
 import DiscloserData from "./DiscloserData";
 
 const Discloser = () => {
-  // State to track the currently opened disclosure panel
-  const [openDisclosureIndex, setOpenDisclosureIndex] = useState(null);
 
-  // Data to be passed to the DiscloserData component
   const data = [
     { title: 'Display Title', titleName: 'Fall NACC Mini Conference', description: 'The 2024 North American Conservation Corps Annual Conference' },
     { title: 'Description', titleName: 'The Conference unites people from various sectors...', description: 'The 2024 North American Conservation Corps Annual Conference' },
@@ -18,22 +17,16 @@ const Discloser = () => {
     { title: 'Status', titleName: 'Active', description: 'The 2024 North American Conservation Corps Annual Conference', classname: 'border-none' },
   ];
 
-  const handleDisclosureChange = (index) => {
-    setOpenDisclosureIndex(openDisclosureIndex === index ? null : index);
-  };
-
   return (
     <div className="h-screen w-full p-10 px-4">
       <div className="mx-auto w-full max-w-7xl border-[#737373] rounded-xl bg-maincontent border-2">
         {data.map((item, index) => (
-          <DiscloserData
-            key={index}
-            title={item.title}
-            titleName={item.titleName}
-            description={item.description}
-            classname={item.classname || ''}
-            isOpen={openDisclosureIndex === index} 
-            onToggle={() => handleDisclosureChange(index)} 
+          <DiscloserData 
+            key={index} 
+            title={item.title} 
+            titleName={item.titleName} 
+            description={item.description} 
+            classname={item.classname || ''} 
           />
         ))}
       </div>

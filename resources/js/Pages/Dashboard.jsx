@@ -14,11 +14,11 @@ const Dashboard = () => {
                 <Navbar />
             </div>
 
-            <div className="flex h-full   overflow-x-hidden ">
+            <div className="flex h-full   overflow-hidden ">
                 <Sidebar />
-                <div className="flex-grow w-[calc(100%-224px)] overflow-y-auto  bg-stone-200 opacity-70  ">
-                    <div className=" p-y-14 pl-16 mt-4  flex flex-col gap-12  pb-5  ">
-                        <h2 className="font-black text-textcolor text-3xl   ">
+                <div className="flex-grow w-[calc(100%-240px)] overflow-y-auto  bg-stone-200 opacity-70  ">
+                    <div className=" py-9  pr-20 pl-16 mt-4  flex flex-col gap-12  pb-5  ">
+                        <h2 className="font-black ml-1 text-textcolor text-3xl   tracking-wide ">
                             Dashboard
                         </h2> 
                         <div className="grid md:grid-cols-3 lg:grid-cols-6 w-full  gap-6">
@@ -33,13 +33,13 @@ const Dashboard = () => {
                             />
                             <Chapter
                                 title="CHAPTERS"
-                                active={78}
-                                inactive={2}
+                                active={102}
+                                inactive={23}
                             />
                             <Chapter
                                 title="CHAPTERS"
-                                active={78}
-                                inactive={2}
+                                active={325}
+                                inactive={11}
                             />
                         </div>
                         <div className="grid md:grid-cols-3 lg:grid-cols-6 w-full  gap-6">

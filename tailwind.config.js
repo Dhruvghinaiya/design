@@ -23,14 +23,24 @@ export default {
                 maincontent:'#edefee',
                 cardcolor:'#cbd5e1',
                 linkHover:'#171e52',
-                secondary:'#d4d4d4'
+                secondary:'#d4d4d4',
+                grapth:'#293275',
+                grapth2:'#b1cce3'
+
             },
             height:{
-            25:'5rem'
+            25:'5rem',
+            21:'6.25rem',
+            26:'6.25rem'
             },
             padding:{
-                13:'3rem'
-            }
+                13:'3rem',
+                5:' 1.20rem'
+            },
+            width:{
+            57:'15rem',
+            73:'21rem'
+            },
         },
     },
 

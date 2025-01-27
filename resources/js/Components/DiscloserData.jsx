@@ -4,16 +4,21 @@ import Switch from '@mui/material/Switch';
 import { ChevronDownIcon } from 'lucide-react'
 import React, { useState } from 'react'
 
-const DiscloserData = ({ title, titleName, description, classname, isOpen, onToggle }) => {
+const DiscloserData = ({ title, titleName, description, classname }) => {
+  const [isOpen, setIsOpen] = useState(false); 
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen); 
+  }
+
   return (
-    <div className={`p-3 border-b-2 border-[#caced6] ${classname} ${isOpen ? 'bg-white' : 'bg-transparent'}`}>
-      <Disclosure as="div" open={isOpen} onChange={onToggle}>
+    <div className={`p-3 border-b-2 border-[#caced6]  ${classname} ${isOpen ? 'bg-white' : ''}`}>
+      <Disclosure as="div" defaultOpen={isOpen} onChange={handleToggle} className={`${isOpen ? 'bg-white': 'bg-transparent'}`} >
         {({ open }) => (
           <>
             <DisclosureButton className="group flex w-full items-center justify-between">
-              <span className="text-sm/6 font-medium ">
+              <span className={`text-sm/6 font-medium `}>
                 <span className="text-black">
                   {title}:
                 </span>
@@ -21,9 +26,9 @@ const DiscloserData = ({ title, titleName, description, classname, isOpen, onTog
                   {titleName}
                 </span>
               </span>
-              <ChevronDownIcon className={`size-5 fill-white/60 group-data-[hover]:fill-white/50 ${open ? 'rotate-180' : ''}`} />
+              <ChevronDownIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
             </DisclosureButton>
-            <DisclosurePanel className="mt-2 rounded-xl bg-white">
+            <DisclosurePanel className={`mt-2 rounded-xl  bg-white`}>
               <div className="flex flex-col p-2">
                 <div className="flex justify-end">
                   <PencilSquareIcon className="size-6 " />
