@@ -6,23 +6,21 @@ import React, { useState } from 'react'
 
 const DiscloserData = ({ title, titleName, description, classname }) => {
   const [isOpen, setIsOpen] = useState(false); 
-  const label = { inputProps: { 'aria-label': 'Switch demo' } };
-
+ 
   const handleToggle = () => {
     setIsOpen(!isOpen); 
   }
 
   return (
-    <div className={`p-3 border-b-2 border-[#caced6]  ${classname} ${isOpen ? 'bg-white' : ''}`}>
-      <Disclosure as="div" defaultOpen={isOpen} onChange={handleToggle} className={`${isOpen ? 'bg-white': 'bg-transparent'}`} >
-        {({ open }) => (
+    <div className={`p-3 border-b-2     ${classname} ${isOpen ? 'bg-white' : ''}`}>
+      <Disclosure as="div"   className={`${isOpen ? 'bg-white': 'bg-transparent'}`} >
           <>
-            <DisclosureButton className="group flex w-full items-center justify-between">
+            <DisclosureButton onClick={handleToggle}  className="group flex w-full items-center justify-between">
               <span className={`text-sm/6 font-medium `}>
-                <span className="text-black">
+                <span className="text-black text-lg">
                   {title}:
                 </span>
-                <span className="text-textcolor">
+                <span className="text-textcolor text-lg font-semibold">
                   {titleName}
                 </span>
               </span>
@@ -33,19 +31,19 @@ const DiscloserData = ({ title, titleName, description, classname }) => {
                 <div className="flex justify-end">
                   <PencilSquareIcon className="size-6 " />
                 </div>
-                <span className="text-gray-400">
+                <span className="text-gray-400 ">
                   {title}:
                 </span>
-                <span className="text-textcolor text-xl">
+                <span className="text-textcolor text-2xl font-semibold">
                   {description}
                 </span>
                 <span className="text-textcolor">
-                  <Switch {...label} defaultChecked size="small" /> show On Public Site
+                  <Switch  size="small" /> show On Public Site
                 </span>
               </div>
             </DisclosurePanel>
           </>
-        )}
+
       </Disclosure>
     </div>
   )

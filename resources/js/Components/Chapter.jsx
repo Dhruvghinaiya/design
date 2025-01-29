@@ -1,36 +1,28 @@
 import { EllipsisHorizontalCircleIcon } from "@heroicons/react/24/outline";
 import Border from "./Border";
 
-const Chapter = ({ title, active, inactive, className }) => {
+const Chapter = ({ title, active, inactive,  }) => {
     return (
-        // <div
-        //     className={`col-span-2 flex flex-col justify-between rounded-lg bg-cardcolor p-4 relative ${className}`}
-        // >
-        //     <div className="flex items-center justify-between mb-4">
-        //         <h3 className="text-textcolor font-bold px-6  text-xl  ">{title}</h3>
-        //         <EllipsisHorizontalCircleIcon className="size-8 mr-3"  />
-        //     </div>
-        <div className="bg-slate-300 col-span-2 flex flex-col justify-between p-2 h-full relative">
-            <div className="flex justify-between items-center mb-6">
-
-                <h3 className="text-textcolor font-bold px-8  text-xl tracking-widest  ">
+        <div className="bg-cardcolor shadow-xl    sm:col-span-2 flex flex-col justify-between p-2 py-6  h-full relative">
+            <div className="flex justify-between items-center mb-4">
+                <h3 className="text-textcolor font-bold  xl:px-8   text-xl   ">
                     {title}
                 </h3>
-                 <EllipsisHorizontalCircleIcon className="size-8 mr-4 mt-" />
+                 <EllipsisHorizontalCircleIcon className="size-8  xl:mr-5 lg:mt-3 " />
             </div>
-            <div className="flex items-center  pb-3 gap-20   ">
-                <div className="flex items-end  pl-10 pt-2  gap-4">
-                    <span className="block text-4xl font-bold text-[#1e2875]">
+            <div className="flex    items-center  md:gap-16 lg:gap-16 ">
+                <div className="flex items-end   flex-wrap sm:pl-0 2xl:pl-9  gap-4">
+                    <span className="block text-4xl font-extrabold text-textcolor">
                         {active}
                     </span>
-                    <span className="text-lg text-gray-600">Active</span>
+                    <span className="text-lg ">Active</span>
                 </div>
 
-                <div className=" flex items-end gap-4"> 
-                    <span className="block text-4xl font-bold text-gray-400">
+                <div className=" flex items-end  flex-wrap gap-4 pb-2 text-inactive"> 
+                    <span className="block  text-4xl font-bold ">
                         {inactive}
                     </span>
-                    <span className="text-sm text-gray-600">Inactive</span>
+                    <span className="text-lg ">Inactive</span>
                 </div>
             </div>
             <Border />

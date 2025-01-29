@@ -8,7 +8,8 @@ const Link = ({ name, Icon,route }) => {
         <span>
              <Icon className="h-6 w-6" /> 
          </span>
-        <span><a href={route ? route : '' } className='text-lg tracking-tighter '>{name}</a></span>
+        <span><a as="button" href={route ? route : '' } className='text-lg tracking-tighter '>{name}</a></span>
+        
     </div>
     );
 };
