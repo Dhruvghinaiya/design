@@ -27,7 +27,7 @@ const Dashboard = () => {
 
 ]
     return (
-        <div className=" lg:h-screen overflow-hidden font-abc  w-screen flex flex-col text-indigo  ">
+        <div className=" lg:h-screen overflow-hidden font-Montserrat  w-screen flex flex-col text-indigo  ">
             
             <div className="h-24  ">
                 <Navbar />
@@ -35,16 +35,16 @@ const Dashboard = () => {
 
             <div className="flex h-full   overflow-hidden ">
                 <Sidebar />
-                <div className="flex-grow w-[calc(100%-240px)] overflow-y-auto    bg-gray  ">
-                    <div className=" py-9  pr-20 pl-16 mt-4  flex flex-col gap-8  pb-5  ">
-                        <h2 className="font-bold  ml-1 pt-1 text-textcolor  text-2xl  font-abc  tracking-wider ">
+                <div className="flex-grow w-[calc(100%-240px)] overflow-y-auto  bg-gray  ">
+                    <div className=" sm:py-9   pr-10 xl:pr-20 pl-10 xl:pl-16 mt-4  flex flex-col gap-8  pb-5  ">
+                        <h2 className="font-bold  md:ml-2 pt-1 text-indigo  text-2xl  font-abc  -tracking-tighter ">
                             Dashboard
                         </h2> 
-                        <div className="grid md:grid-cols-3 pt-6 lg:grid-cols-6 w-full  gap-6">
+                        <div className="grid  sm:grid-cols-1 md:grid-cols-2 pt-6 lg:grid-cols-6 w-full gap-y-6 lg:gap-6">
                             <OrganizationCard />
                             <EngagementCard />
                         </div>
-                        <div className="grid md:grid-cols-4  lg:grid-cols-6 w-full  gap-6">
+                        <div className="grid grid-cols-1  lg:grid-cols-6 w-full  gap-6">
                             {data.map((item,)=>(
                                 <Chapter title={item.title}  active={item.active} inactive={item.inactive} />
                             ))}

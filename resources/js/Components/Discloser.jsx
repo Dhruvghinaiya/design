@@ -18,8 +18,8 @@ const Discloser = () => {
   ];
 
   return (
-    <div className=" h-full w-full py-10  md:pr-20 pr-10   ">
-      <div className="mx-auto    sm:w-full h-97 overflow-y-auto   border-[#737373] rounded-3xl bg-maincontent border-2">
+    <div className=" h-full w-full py-10 pl-4  sm:pl-10 lg:pl-0 md:pr-20 pr-6">
+      <div className="mx-auto    sm:w-full h-98 overflow-y-auto  border-[#737373] rounded-3xl bg-gray border-2">
         {data.map((item, index) => (
           <DiscloserData 
             key={index} 

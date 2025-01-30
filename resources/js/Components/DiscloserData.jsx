@@ -13,33 +13,35 @@ const DiscloserData = ({ title, titleName, description, classname }) => {
 
   return (
     <div className={`p-3 border-b-2     ${classname} ${isOpen ? 'bg-white' : ''}`}>
-      <Disclosure as="div"   className={`${isOpen ? 'bg-white': 'bg-transparent'}`} >
+      <Disclosure as="div"   className={`${isOpen ? 'bg-white': 'bg-transparent'} `} >
           <>
-            <DisclosureButton onClick={handleToggle}  className="group flex w-full items-center justify-between">
-              <span className={`text-sm/6 font-medium `}>
-                <span className="text-black text-lg">
+            <DisclosureButton onClick={handleToggle}  className={`group  ${isOpen ? 'border-b-2 pb-5' :''}  space-y-3   flex w-full items-center justify-between `}>
+              <div className='lg:ml-3  flex flex-col lg:flex-row md:space-x-2 items-start lg:items-center  pt-3 font-medium'>
+                <span className="text-darkBlack  text-xsm sm:text-sm  tracking-wide  ">
                   {title}:
                 </span>
-                <span className="text-textcolor text-lg font-semibold">
+                <span className=" text-xsm text-left  sm:text-lg font-semibold ">
                   {titleName}
                 </span>
-              </span>
-              <ChevronDownIcon className="size-5 fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
+              </div>
+              <ChevronDownIcon className=" size-4 h-6 w-8   sm:mr-3  fill-white/60 group-data-[hover]:fill-white/50 group-data-[open]:rotate-180" />
             </DisclosureButton>
-            <DisclosurePanel className={`mt-2 rounded-xl  bg-white`}>
-              <div className="flex flex-col p-2">
+            <DisclosurePanel className={`rounded-xl  bg-white pb-5`}>
+              <div className="flex flex-col sm:p-2">
                 <div className="flex justify-end">
-                  <PencilSquareIcon className="size-6 " />
+                  <PencilSquareIcon className="size-7  mr-2" />
                 </div>
-                <span className="text-gray-400 ">
+                <div className='pl-3 flex flex-col   space-y-1' >
+                <span className="text-gray-400  pl-2 pt-1">
                   {title}:
                 </span>
-                <span className="text-textcolor text-2xl font-semibold">
+                <span className=" text-xl lg:text-3xl font-semibold pl-2 tracking-wider  ">
                   {description}
                 </span>
-                <span className="text-textcolor">
-                  <Switch  size="small" /> show On Public Site
+                <span className="pt-5 pl-1 tracking-tight ">
+                  <Switch  size="small"  /> show On Public Site
                 </span>
+                </div>
               </div>
             </DisclosurePanel>
           </>

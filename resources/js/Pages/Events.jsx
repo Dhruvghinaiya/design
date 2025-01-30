@@ -42,28 +42,28 @@ const Events = () => {
   ]
 
   return (
-    <div className=" h-screen overflow-hidden font-abc text-indigo  w-screen flex flex-col">
+    <div className=" h-screen overflow-hidden font-Montserrat text-indigo  w-screen flex flex-col">
     <div className="h-24  ">
         <Navbar />
     </div>
 
       <div className="flex h-full overflow-hidden ">
         <Sidebar />
-        <div className="flex-grow w-[calc(100%-224px)] overflow-y-auto bg-stone-200 ">
-          <div className="p-y-14 pl-16 ml-2 mt-12 flex flex-col gap-12 pb-4">
-            <div className="flex items-center gap-3">
-              <h2 className="font-black text-textcolor  text-2xl tracking-wider mt-1">Fall NACC Mini Conference</h2>
-              <span className="bg-active rounded-3xl px-4 py-1 tracking-widest text-sm mt-2">Active</span>
+        <div className="flex-grow w-[calc(100%-224px)] overflow-y-auto bg-gray ">
+          <div className="p-y-14 lg:pl-16 ml-3 lg:ml-2  mt-12 flex flex-col gap-12 pb-4">
+            <div className="flex items-center gap-3 ml-5 sm:ml-0 mt-2">
+              <h2 className="font-black text-2xl tracking-wider ">Fall NACC Mini Conference</h2>
+              <span className="bg-active text-darkgreen rounded-3xl px-4 py-1 tracking-widest text-sm  font-medium mr-2 sm:mr-0">Active</span>
             </div>
             <TabGroup>
             <TabList
-               className="flex flex-wrap   gap-x-12 font-bold text-lg border-b-2     sm: max-w-screen-xl  border-black">
+               className="flex flex-wrap   gap-x-12  mr-3 lg:mr-0  space-x-1  font-bold text-lg border-b-2   2xl:w-98  border-indigo">
                 {tabs.map((tab, index) => (
                   <Tab as={Fragment} key={index}>
                     {({ selected }) => (
                       <button
                         className={`
-                          relative pb-5 w-full mt-1 text-textcolor tracking-wide  sm:w-auto outline-none text-black"}
+                          relative pb-5 w-full font-semibold  text-textcolor tracking-wide   sm:w-auto outline-none text-black"}
                         `}
                       >
                         {tab.name}
